@@ -1,0 +1,11 @@
+div p{
+    color: green;
+}
+
+ol > li{
+    color: blue;
+}
+
+h2 + h3 {
+    background-color: lightblue;
+}

@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.titulo_principal{
+    color:#48d1cc;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    line-height: 15px;
+}
+
+.texto_biografia{
+    color:#48d1cc;
+    text-align: justify;
+    margin-top:50px;
+    width: 70%;
+}
+
+.descripcion_Biografia{
+    font-weight: bold;
+    color: #48d1cc;
+}
+
+.menu a[href]{
+    color: #48d1cc;
+    text-decoration: none;
+}
+.menu  a:hover{
+    color: yellow;
+}
+
+.menu{
+    display:flex;
+    justify-content:space-evenly ;
+    margin-right: 150px;
+}
+
+.subtitulo_fotografias{
+    color: #48d1cc;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+#Subtitulo{
+    text-decoration: underline;
+}
+#Subtitulo h3::first-letter{
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+}
