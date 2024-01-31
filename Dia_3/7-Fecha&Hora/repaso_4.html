@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../7-Fecha&Hora/style.css">
+    <title>Repaso 4 Fecha & Hora</title>
+</head>
+<body onload = "inciarReloj()"> <!--No olvidar iniciar esta funcion-->
+    <input type="number" id="tiempoUsuario">
+    <button onclick="inicioAlarma()">Iniciar Alarma</button> <!--No olvidar iniciarlizar Alarma OK-->
+    <h1 id="horaPantalla">00:00:00</h1>
+    <audio src="../7-Fecha&Hora/audios/alarma.mp3" id="audio"></audio>
+
+    <script>
+
+        let tiempoDeUsuario = document.getElementById("tiempoUsuario");
+        let horaEnPantalla = document.getElementById("horaPantalla");
+        let audioSistema = document.getElementById("audio");
+
+        function inicioAlarma(){
+            setTimeout(finAlarma , 1000 * tiempoDeUsuario.value);
+        }
+
+        function finAlarma(){
+            horaEnPantalla.style.color = "blue";
+            audioSistema.play();
+        }
+
+        function inciarReloj(){
+            setInterval(tictac , 1000)
+        }
+
+        function tictac(){
+            let formatoHora = new Date();
+            let hora = String( formatoHora.getHours()).padStart(2,"0");
+            let minuto = String( formatoHora.getMinutes()).padStart(2,"0");
+            let segundo = String( formatoHora.getSeconds()).padStart(2,"0");
+
+            let formatoPantalla = hora + ':' + minuto + ":" + segundo;
+            horaEnPantalla.textContent = formatoPantalla; 
+        }
+    </script>
+
+    
+</body>
+</html>

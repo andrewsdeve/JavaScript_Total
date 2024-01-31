@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../7-Fecha&Hora/style.css">
+    <title>Ejercicio de Fecha y Hora</title>
+</head>
+<body onload="comenzarReloj()">
+    <input type="number" id="tiempoUsuario">
+    <button onclick="inicioAlarma()">Iniciar Alarma</button>
+    <h1 id="textoEstadoAlarma">00:00:00</h1>
+    <audio src="../7-Fecha&Hora/audios/alarma.mp3" id="sonidoAlarma"></audio>
+
+    <script>
+        let tiempoAlarma = document.getElementById("tiempoUsuario");
+        let estadoAlarma = document.getElementById("textoEstadoAlarma");
+        let alarma = document.getElementById("sonidoAlarma")
+
+        function inicioAlarma(){
+            setTimeout(finAlarma , 1000 * tiempoAlarma.value);
+        }
+        function finAlarma(){
+            estadoAlarma.style.color = "green";
+            alarma.play();
+        }
+
+        function comenzarReloj(){
+            setInterval(tictac,1000);
+
+        }
+        function tictac(){
+            let tiempoActual = new Date();
+            let hora = tiempoActual.getHours();
+            let minuto = tiempoActual.getMinutes();
+            let segundo = String(tiempoActual.getSeconds()).padStart(2,"0");
+
+            let textoHora = hora + ":" + minuto + ":" + segundo;
+            estadoAlarma.textContent = textoHora;
+        }
+    </script>
+
+
+
+</body>
+</html>

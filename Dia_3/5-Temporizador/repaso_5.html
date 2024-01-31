@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso 5 temporizador</title>
+</head>
+<body>
+    <input type="number" id="temporizadorDefinidoUsuario">
+    <button onclick="tiempoAlarma()">Iniciar Alarma</button>
+    <h1 id="mensajePantalla" style="color: red;">Alarma Apagada</h1>
+
+    <script>
+        let temporizador = document.getElementById("temporizadorDefinidoUsuario");
+        let mensaje = document.getElementById("mensajePantalla");
+
+        function tiempoAlarma(){
+            setTimeout(temporizadorDef , 1000 * temporizador.value);
+        }
+
+        function temporizadorDef(){
+            mensaje.textContent = "Alarma Encendida";
+            mensaje.style.color = "blue";
+        }
+
+
+    </script>
+</body>
+</html>
