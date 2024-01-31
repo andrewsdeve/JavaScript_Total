@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica # 2</title>
+</head>
+<body>
+    <p>Ingrese su usuario: </p>
+    <input type="text" id="nombreUsuario">
+    <br><br>
+    <button onclick="validaUsuario()">Enviar</button>
+    <h1 id="textoSalida">No sabemos tu usuario....</h1>
+
+    <script>
+        function validaUsuario(){
+            let elementoUsuario = document.getElementById("nombreUsuario");
+            let salida = document.getElementById("textoSalida");
+            let mensaje = "Hola tu usuario es.... " + nombreUsuario.value;
+            salida.textContent = mensaje;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica # 3</title>
+</head>
+<body>
+    <p>Vamos a validar tu usuario:  </p>
+    <input type="text" id="usuario">
+    <button onclick="nombreUsuario()">Validar</button>
+    <h1 id="textoPantalla">Pendiente por Validar</h1>
+
+    <script>
+        function nombreUsuario(){
+            let elementoUsuario = document.getElementById("usuario");
+            let salidaTexto = document.getElementById("textoPantalla");
+            let mensaje = "Tu usuario fue validado como:  " + usuario.value;
+            salidaTexto.textContent = mensaje;
+        }
+    </script>
+
+</body>
+</html>

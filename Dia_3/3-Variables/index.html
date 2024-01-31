@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <p>Ingresa Tu nombre</p>
+    <input type="text" id="nombreUsuario">
+    <button onclick="saludarUsuario()">Saludar</button>
+
+
+
+    <script>
+        function saludarUsuario(){
+            let nombre = document.getElementById("nombreUsuario");
+            alert("Hola " + nombre.value)
+        }
+    </script>
+</body>
+</html>
