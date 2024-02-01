@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../8-proyecto_dia_3/style.css">
+    <title>Juego Tennis al Dia</title>
+</head>
+<body onload ="iniciarTiempo()"> <!--No olvidar iniciar esta funcion-->
+    <p>1. Pais de nacimiento de Jannik Sinner?</p>
+    <input type="text" id="primeraRespuesta">
+    <p>2. Nombre del Jugador numero 1 del Ranking de la ATP?</p>
+    <input type="text" id="segundaRespuesta">
+    <p>3. Cual es la nacionalidad de Rafael Nadal?</p>
+    <input type="text" id="terceraRespuesta">
+    <p>4. Cuantos Juegos componen un set? </p>
+    <input type="number" id="cuartaRespuesta">
+    <p>5. Siglas del Circuito Femenito de tennis? </p>
+    <input type="text" id="quintaRespuesta">
+    <h1 id = "contadorPantalla"></h1>
+    <audio src="../7-Fecha&Hora/audios/alarma.mp3" id="audio"></audio>
+    <button onclick="comprobar()">Comprobar Respuestas</button> <!--No olvidar crear la funcion para validar estas respuestas-->
+    <button id="respuestasDeUsuario" onclick="respuestasUsuario()">Mostrar Respuesestas</button>
+
+    <script>
+        let respuestaUno = document.getElementById("primeraRespuesta");
+        let respuestaDos = document.getElementById("segundaRespuesta");
+        let respuestaTres = document.getElementById("terceraRespuesta");
+        let respuestaCuatro = document.getElementById("cuartaRespuesta");
+        let respuestaCinco = document.getElementById("quintaRespuesta");
+        let audioFinTiempo = document.getElementById("audio");
+        let contadorDePantalla = document.getElementById("contadorPantalla");
+        let mostrarRespuestas = document.getElementById("respuestasDeUsuario");
+        
+
+        function comprobar(){
+            setTimeout(finTiempo, -1000 * contadorDePantalla.value)
+
+        }
+
+        function finTiempo(){
+            contadorDePantalla.style.color = "blue";
+            audioFinTiempo.play();
+        }
+
+        function iniciarTiempo(){
+            setInterval(tictac, -1000);
+        }
+
+        function tictac(){
+            let cuentaRegresiva = new Date();
+            let segundos = String(cuentaRegresiva.getSeconds()).padStart(2,"0");
+            let segundosPantalla = ":" + segundos;
+            contadorDePantalla.textContent = segundosPantalla;
+        }
+
+        function respuestasUsuario(){
+            
+        }
+
+    </script>
+
+
+</body>
+</html>

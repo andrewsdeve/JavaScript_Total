@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responde Rapido</title>
+</head>
+<body onload="comenzarCuentaRegresiva()">
+    <h2>Responde las preguntas lo mas rapido que puedas <span id="cuentaRegresiva"></span></h2>
+    <p>1. Nombre del Ultimo Campeon del Abierto de Australia?</p>
+    <input type="text" id="Respuesta1">
+    <p>2. Pais de Nacimiento de Janik Sinner?</p>
+    <input type="text" id="Respuesta2">
+    <p>3. Que torneo inicio jugando Rafael Nadal el 2024?</p>
+    <input type="text" id="Respuesta3">
+    <p>4. Cual es el proximo Gran Slam de 2024?</p>
+    <input type="text" id="Respuesta4">
+    <p>5. Cuantos Games se juegan en un set?</p>
+    <input type="number" id="Respuesta5">
+    <br><br>
+    <button onclick="finalizado()">Termine !</button>
+    <br><br>
+    <button onclick="intentarDeNuevo()">Volver a Intentar</button>
+    <audio src="./audio/gameover.mp3" id="audio"></audio>
+
+    <!-- Aqui comienza el script para la dimania del Juego-->
+
+    <script>
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+        let audioFinal = document.getElementById("audio");
+
+        function comenzarCuentaRegresiva(){
+            tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo = setInterval(tictac , 1000);
+            document.getElementById("cuentaRegresiva").textContent = 30;
+        }
+
+     /*Creamos la funcion tictac  la cual es la encargada de controlar el tiempo */
+
+        function tictac(){
+            let tiempo = document.getElementById("cuentaRegresiva").textContent;
+            document.getElementById("cuentaRegresiva").textContent = tiempo - 1;
+        }
+
+        /*Ahora creamos la funcion tiempo cumplido, la cual indica que sucede cuando se cumplan los 30 segundos */
+
+        function tiempoCumplido(){
+            clearInterval(intervaloDeTiempo);
+            document.getElementById("cuentaRegresiva").textContent = 0;
+            audioFinal.play();
+            alert("GAME OVER: Se acabo tu tiempo Capullo")
+        }
+
+        function finalizado(){
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+            let fecha = new Date();
+            let respuesta1 = document.getElementById("Respuesta1").value;
+            let respuesta2 = document.getElementById("Respuesta2").value;
+            let respuesta3 = document.getElementById("Respuesta3").value;
+            let respuesta4 = document.getElementById("Respuesta4").value;
+            let respuesta5 = document.getElementById("Respuesta5").value;
+
+            let mensaje = fecha.toLocaleDateString("es-ES") + "\n" + "1. " + respuesta1 +  "\n" + "2. " + respuesta2 + "\n" + "3. " + respuesta3 + "\n" + "4. " + respuesta4 + "\n" + "5. " + respuesta5 ; 
+
+            alert(mensaje);
+        }
+
+        function intentarDeNuevo(){
+            location.reload();
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
