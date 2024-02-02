@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPASO VARIABLES</title>
+</head>
+<body>
+    <p>Ingresa Nombre: </p>
+    <input type="text" id="ingresoDeNombre">
+    <button onclick="saludar()">Imprimir</button>
+
+    <script>
+        function saludar(){
+            let saludo = document.getElementById("ingresoDeNombre"); /*Aqui creamos una constante donde vamos almacenar el valor ingresado en el input*/
+            alert(`Hola ${saludo.value} Bienvenido al curso de JavaScript`); /*Aqui se invoca la constante pero se extrae el valor con .value para mostrar en pantalla*/
+        }
+    </script>
+</body>
+</html>

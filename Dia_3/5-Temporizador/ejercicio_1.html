@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+</head>
+<body>
+    <input type="number" id="ingresaTiempo">
+    <button onclick="iniciaAlarma()">Iniciar</button>
+    <h1 id="textoAlarma">Apagado</h1>
+
+    <script>
+        let tiempoIngresado = document.getElementById("ingresaTiempo");
+        let alarmaTexto = document.getElementById("textoAlarma");
+
+
+        function iniciaAlarma(){
+            setTimeout(finTiempoAlarma, 1000 * tiempoIngresado.value);
+        }
+
+        function finTiempoAlarma(){
+            alarmaTexto.textContent = "Encendido";
+            alarmaTexto.style.color = "blue";
+        }
+    </script>
+
+</body>
+</html>

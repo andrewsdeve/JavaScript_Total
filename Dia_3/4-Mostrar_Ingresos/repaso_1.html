@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Ingresos</title>
+</head>
+<body>
+    <p>Por favor ingresar un nombre: </p>
+    <input type="text" id="ingresoDeNombre">
+    <button onclick="imprimeNombre()">Ingresar</button>
+    <h1 id="textoPantalla">En este momento no sabemos tu nombre</h1>
+
+    <script>
+        function imprimeNombre(){
+            let nombre = document.getElementById("ingresoDeNombre");
+            let mensajePantalla = document.getElementById("textoPantalla");
+            let mensaje = `Hola ${nombre.value} Bienvenido al Curso de JavaScript`;
+
+            mensajePantalla.textContent = mensaje;
+        }
+    </script>
+</body>
+</html>

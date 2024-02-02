@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso de Audio</title>
+</head>
+<body>
+    <input type="number" id="ingresoTiempoAlarma">
+    <button onclick="iniciaTiempo()">Iniciar Alarma</button>
+    <h1 id="textoAlarmaPantalla">Apagado</h1>
+    <audio id="alarmaAudio" src="./audios/alarma.mp3" type="audio/mpeg" Sonido no Habilitado></audio>
+
+
+    <script>
+
+        let tiempoIngresado = document.getElementById("ingresoTiempoAlarma");
+        let textoPantalla = document.getElementById("textoAlarmaPantalla");
+        let audioAlarma = document.getElementById("alarmaAudio");
+
+        function iniciaTiempo(){
+            setTimeout(finTiempo , 1000 * tiempoIngresado.value);
+        }
+
+        function finTiempo(){
+            textoPantalla.textContent = "Encendido";
+            textoPantalla.style.color = "blue";
+            audioAlarma.play();
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
