@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parametros</title>
 </head>
 <body>
+    <h2>Suma de Numeros</h2>
+    <p>Ingrese Primer Numero</p>
+    <input type="number" id="numeroUno">
+    <p>Ingrese Segundo Numero</p>
+    <input type="number" id="numeroDos">
+    <button onclick="enviarResultado()">Resultado</button>
+    <h2 id="textoResultado"></h2>
+
     <script>
 
-        function sumar(numero1 , numero2){
-            let resultado = numero1 + numero2;
+        function sumar(arg1,arg2){
+            resultado = +arg1 + +arg2;
             return resultado;
         }
-       alert(sumar(5,2));
 
+        function enviarResultado(){
+            let primerNumero = document.getElementById("numeroUno");
+            let segundoNumero = document.getElementById("numeroDos");
+            let textoResultadoPantalla = document.getElementById("textoResultado");
 
-
-
+            let resultadoSuma = sumar(primerNumero.value,segundoNumero.value);
+            textoResultadoPantalla.textContent = `El resultado es: ${resultadoSuma}`;
+        }
+        
     </script>
+
+
 </body>
 </html>
