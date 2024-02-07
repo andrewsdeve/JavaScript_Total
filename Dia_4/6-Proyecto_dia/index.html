@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <title>Calculadora ANDREW'S</title>
+</head>
+<body>
+    <h1>Calculadora ANDREW'S</h1>
+    <div>
+        <input type="text" id="numeroUno" value="0" class="inputEntrada">
+        <input type="text" id="numeroDos" value="0" class="inputEntrada"> <br>
+        <div class="operadoresBasicos">
+            <button type="number" onclick="sumar()" class="botonOperador">Sumar</button>
+            <button type="number" onclick="restar()" class="botonOperador">Restar</button>
+            <button type="number" onclick="multiplicar()" class="botonOperador">Multiplicar</button>
+            <button type="number" onclick="dividir()" class="botonOperador">Dividir</button>
+        </div> <br>
+        <div class="operadoresSecundarios">
+            <button type="number" onclick="potencia()" class="botonOperadorSecundario">Potencia</button>
+            <button type="number" onclick="raiz()" class="botonOperadorSecundario">Raiz</button>
+        </div> <br>
+        <div class="operadoresSecundarios">
+            <button type="number" onclick="absoluto()" class="botonOperadorSecundario">Absoluto</button>
+            <button type="number" onclick="random()" class="botonOperadorSecundario">Random</button>
+        </div>
+        <h3>RESULTADO</h3>
+        <input type="text" id="resultado" class="textoResultado" value="0">
+    </div>
+    <div class="operadoresSecundarios">
+        <button type="number" onclick="round()" class="botonOperadorTersiario">Round</button>
+        <button type="number" onclick="piso()" class="botonOperadorTersiario">Floor</button>
+        <button type="number" onclick="techo()" class="botonOperadorTersiario">Ceil</button>
+
+    <script src="./script_2.js"></script>
+</body>
+</html>

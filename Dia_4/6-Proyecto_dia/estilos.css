@@ -1,0 +1,50 @@
+.inputEntrada{
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 13.3%;
+    background-color: #b6daf6;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.operadoresBasicos{
+    width: 60%;
+}
+
+.botonOperador{
+    width: 12%;
+    height: 60px;
+}
+
+.botonOperadorSecundario{
+    width: 15%;
+    height: 40px;
+}
+h3{
+    margin-left: 140px;
+}
+
+.textoResultado{
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 397px;
+    background-color: #e50404;
+    color: rgb(230, 225, 225);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.botonOperadorTersiario{
+    width: 10%;
+    height: 60px;
+}
+
+

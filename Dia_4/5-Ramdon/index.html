@@ -6,14 +6,16 @@
     <title>Numero Random</title>
 </head>
 <body>
-    <button onclick="numeroAleatorio()">Dame un numero Aleatorio</button>
+    <button onclick="numeroAleatorio(10,15)">Dame un numero Aleatorio</button>
     <h2>Numero Aleatorio: <span id="textoAleatorio">---</span></h2>
 
     <script>
         aleatorioTexto = document.getElementById("textoAleatorio");
 
-        function numeroAleatorio(){
-            aleatorioTexto.textContent = Math.random();
+        function numeroAleatorio(minimo , maximo){
+            maximo = maximo + 1;
+            resultado = Math.floor(Math.random() * (maximo - minimo ) + minimo);
+            aleatorioTexto.textContent = resultado;
         }
 
     </script>
