@@ -13,3 +13,42 @@ function listarNotas(){
 
     }
 }
+
+
+function calcularPromedio() {
+    let suma = 0;
+    for (i=0; i < 5; i++) {
+        suma += array[i];
+    }
+    let promedio = (suma / 5);
+    document.getElementById("promedio").textContent = promedio;
+}
+
+function notaMasAlta(){
+    let notaAlta = 0;
+    let i = 0;
+
+    while( i < 5){
+         if(array[i] > notaAlta){
+            notaAlta = array[i];
+         }
+         i++
+    }
+    document.getElementById("nota").textContent = notaAlta
+}
+
+function hayAplazo(){
+    let aplazo = "NO";
+    let i = 0;
+
+    do{
+        if(array[i] < 4){
+            aplazo = "Si";
+            break;
+
+        }
+        i++
+    } while(i < 5);
+
+    document.getElementById("aplazo").textContent = aplazo;
+}
