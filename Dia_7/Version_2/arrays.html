@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+
+        let misAmigos = ["Monica", "Rose", "Chandler", "Joey", "Rachel", "Phoebe"]; /*Definicion de un Array*/
+
+
+        misAmigos.length;/*Calcula la longitud del array*/
+
+
+        misAmigos.pop(); /*Elimina el ultimo Elemento*/
+
+
+        let eliminado = misAmigos.pop(); /*Almancena el ultimo elemento eliminado en una variable*/
+
+
+        misAmigos.shift(); /*Elimina el primer elemento*/
+
+
+        let eliminado2 = misAmigos.shift(); /*Almacena en una variable el primer elemento eleminado*/
+
+        misAmigos.unshift("Rachel"); /*Agraga elemento en el indice 0 del array*/
+        misAmigos.unshift("Phoebe");
+
+
+        misAmigos.push("Pedro");/*Agraga en la ultima posicion del array*/
+
+        misAmigos.splice(2,3);
+
+
+        /*RECORRER EL ARRAY*/
+
+        misAmigos.forEach(function(amigo){
+            console.log(amigo)
+        })
+
+        misAmigos.forEach(function(amigo,index){
+            console.log(index + ":"+ amigo)
+        })
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
