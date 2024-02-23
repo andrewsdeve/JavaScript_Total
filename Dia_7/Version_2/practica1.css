@@ -1,0 +1,5 @@
+.captura-notas{
+    display: grid;
+    grid-template-columns: 1;
+    width: 200px;
+}
