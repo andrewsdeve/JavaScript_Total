@@ -8,3 +8,11 @@ p{
     color: black;
     font-weight: bold;
 }
+
+.menuInputMayor{
+    background-color: blue;
+}
+
+.menuInputMenor{
+    background-color: red;
+}

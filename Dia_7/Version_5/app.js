@@ -2,32 +2,22 @@
 function crearParrafoTienda(textoLabel, valorMin){
     // Crear las etiquetas de parrafo
     let elementoParrafo = document.createElement("p");
-    
     // Crear la etiqueta label
-
-    let elementoEtiqueta = document.createElement("lable");
+    let elementoEtiqueta = document.createElement("label");
     elementoEtiqueta.innerText = textoLabel + ": ";
-
     //Conectar con el input
     elementoEtiqueta.setAttribute("for", textoLabel);
-
     // crear le etiqueta input
-
     let elementoInput = document.createElement("input");
-
     // establecer atributos de input
     elementoInput.setAttribute( "type" , "number" );
     elementoInput.setAttribute("id", textoLabel);
     elementoInput.setAttribute("min", valorMin);
     elementoInput.setAttribute("value", 0);
-
     //agregar label e input a parrafo
-
     elementoParrafo.appendChild(elementoEtiqueta) ;
     elementoParrafo.appendChild(elementoInput);
-
     // devolver el parrafo completo
-
     return elementoParrafo;
 }
 
@@ -64,7 +54,7 @@ function calcular(){
     let posicionVentas = 0;
     let elementosventas = document.getElementById("itemsTiendas");
     for(let item of elementosventas.children){
-        let valorVenta = extraerNumero(item.children[1])
+        let valorVenta = extraerNumero(item.children[1]);
         ventas[posicionVentas] = valorVenta;
         posicionVentas++;
     }
@@ -73,15 +63,25 @@ function calcular(){
     let ventaMayor = calcularMayor(ventas);
     let ventaMenor = calcularMenor(ventas) ;
 
+    for(let item of elementosventas.children){
+        let valorVenta = extraerNumero(item.children[1]);
 
-    let mensajePantalla = `Total Ventas:  ${totalVentas}   Venta Mayor: ${ventaMayor}    Venta Menor:  ${ventaMenor}`
+        item.children[1].className = "menuNeutro"
+    
+        if(valorVenta == ventaMayor){
+            item.children[1].className = "menuInputMayor"
+        }
+        if(valorVenta == ventaMenor){
+            item.children[1].className = "menuInputMenor"
 
+        }
+    }
 
-    let mensajeSalida = "Total ventas: " + totalVentas +
-                        "/Venta Mayor: " + ventaMayor +
-                        "/Venta Menor: " + ventaMenor;
+    let mensajeSalida = "Total ventas: " + totalVentas;
     let elementoSalida = document.getElementById("parrafoSalida")
-    elementoSalida.textContent = mensajePantalla;
+    elementoSalida.textContent = mensajeSalida;
+
+    
 }
 
 function sumarTotal(array){
