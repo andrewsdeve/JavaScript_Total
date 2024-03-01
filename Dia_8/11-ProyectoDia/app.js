@@ -23,7 +23,7 @@ function agregarEmpleado(){
 
 function mostrarEmpleados(){
     let listado = '';
-    for(empleado of empleados){
+    for(let empleado of empleados){
         for(let prop in empleado){
             listado = listado + prop.toUpperCase( )+ " : " + empleado[prop] + " ";  
             
