@@ -11,7 +11,6 @@ class Deportista{
         this.apellido = apellido;
     }
 }
-
 class Futbolista extends Deportista{
     constructor(nombre,apellido,goles){
         super(nombre,apellido);
@@ -24,8 +23,33 @@ class Futbolista extends Deportista{
         this._goles = nvoGoles; // Metodo Set  para asignar nuevo valor a la propiedad privada
     }
 }
-
 let Fubolista1 = new Futbolista ("Carlos", "Gomez", 5);
+
+// Otro ejemmplo
+
+class Medicos{
+    constructor(nombre,apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+
+class Cirujanos extends Medicos{
+    constructor(nombre,apellido,especialidad){
+        super(nombre,apellido);
+        this._especialidad = especialidad;
+    }
+    get  especialidad(){
+        return this._especialidad;
+    }
+
+    set especialidad(nuevaEspecialidad){
+        this._especialidad = nuevaEspecialidad;
+    }
+}
+
+let nvoMedico = new Medicos("Carlos", "Martinez");
+let nvoCirujano = new Cirujanos("Juan", "Gomez","Cardiologia");
 
 
 
