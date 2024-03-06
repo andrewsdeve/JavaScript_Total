@@ -1,0 +1,12 @@
+{
+    "nombre":"Pedro Toledo",
+    "edad": 35,
+    "esEstudiante": false,
+    "direccion": {
+        "calle": "Av. Siempreviva 742"
+    },
+    "telefonos": [
+        "555-555-555",
+        "555-555-666"
+    ]
+}
