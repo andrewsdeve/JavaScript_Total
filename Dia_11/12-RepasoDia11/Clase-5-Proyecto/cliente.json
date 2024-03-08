@@ -1,0 +1,17 @@
+{
+    "banco": "Banco de Sprinfield",
+    "sucursal": "Springfield, IL",
+    "titular": "Torres Manuel",
+    "nro_cuenta": "117654182/07",
+    "saldo": [{
+        "moneda": "USD", 
+        "monto": 725.09
+    },
+    {
+        "moneda": "EUR", 
+        "monto": 345.12
+    }],
+    "cbu": "12564321789865",
+    "abierto": "01/05/2024"
+}
+

@@ -7,5 +7,5 @@ let textoPantalla = document.getElementById("texto");
 textoPantalla.textContent = datosJson.nombre;
 })
 .catch(function(error){
-    alert(error);
+    alert(error)
 })
