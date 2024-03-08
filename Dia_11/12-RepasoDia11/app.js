@@ -42,3 +42,21 @@
 
     estudiantes (array) -> Pedro Picapiedra, Pablo Marmol y Vilma Picapiedra */
 
+    /* ACCEDER A LOS DATOS EN JSON*/
+
+    let miPersona = {
+        "nombre": "Pedro Toledo",
+        "edad": 45,
+        "esEstudiante": false,
+        "direccion": {
+            "calle": "Av Siempre viva 742",
+            "ciudad": "Springfield"
+        },
+        "telefonos": [
+            "555-555-555",
+            "555-555-556"
+        ]
+    }
+    let texto = document.getElementById("nombre");
+    texto.textContent = miPersona.nombre;
+
