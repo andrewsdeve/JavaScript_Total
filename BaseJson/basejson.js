@@ -1,6 +1,6 @@
 let datosJson;
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', "persona.json", true);
+        xhr.open('GET', "nombreDeTuJson.json", true);
         xhr.responseType = 'json';
         xhr.onload = function() {
             if(xhr.status === 200) {
