@@ -1,0 +1,16 @@
+{
+    "nombre": "Carlos Andres Martinez",
+    "edad": 47,
+    "profesion": "Ingeniero Software",
+    "casado": true,
+    "direccion": {
+        "calle": "Av Esperanza 45-56",
+        "pais": "Colombia",
+        "ciudad": "Bogota"
+    },
+    "empleos": [
+        "Colsanitas",
+        "Osc Telecoms",
+        "Sogemer SL"
+    ]
+}
