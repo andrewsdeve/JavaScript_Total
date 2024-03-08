@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./persona.js"></script>
-    <title>Introduccion a Json</title>
-</head>
-<body>
-    <h1>Introduccion a Json</h1>
-    <div id="nombre"></div>
-</body>
-
-<script>
-    let datosJson;
+let datosJson;
         let xhr = new XMLHttpRequest();
         xhr.open('GET', "persona.json", true);
         xhr.responseType = 'json';
@@ -26,5 +12,4 @@
             }
         }
         xhr.send();
-</script>
-</html>
+
