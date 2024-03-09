@@ -1,7 +1,10 @@
-const wrapper = document.body.children[0];
-const div = wrapper.children[1];
-const h1 = div.previousElementSibling;
-const anchor = div.children[1];
-anchor.addEventListener('click', function(){
-    h1.textContent = "Estoy siendo Modificado"
-})
+const wrapper = document.getElementById("wrapper");
+const links = document.getElementsByClassName("link");
+const divs = document.getElementsByTagName("div");
+const input = document.getElementsByName("telefono");
+console.log(wrapper);
+console.log(links);
+console.log(divs);
+console.log(input);
+
+
