@@ -1,25 +1,41 @@
 /* EVENTOS DEL RATON */
-// 1. Sus propiedades mas imporatnes estan:
-// a. keydown => Cuando el usuario preciosa una tecla
-// b. keyup => Cuando se suelta una tecla
-// c. keypress => cuando se preciosa y se suelta rapidamente
+// Sus propiedades mas imporantes esta: 
+// 1. click => Al dar clic
+//2. mousemove => cuando se mueve el mouse del objetivo
+//3. mouseover => Cuando el mouse se posesiona sobre un objetivo
+//4. mouseout => cuando el mouse es retirado del objetivo
 
-// PRACTICA ==> Funcional OK
+// Primer evento para tenerlo en cuenta y funciona OK
 
-let campo = document.getElementById("miCampo");
-function verificarNumero(e){
-    if(e.keyCode < 48 || e.keyCode > 57 ){
-        e.preventDefault(); // esto hace eque esa tecla no se imprima
-    };
-};
-campo.addEventListener('keydown', verificarNumero);
-campo.addEventListener('keyup', function(e){
-    console.log('Entrada del usuario ' + e.target.value);
+// let menu = document.getElementById("miMenu");
+// let boton = document.getElementById("miBoton");
+// boton.addEventListener('click', function(){
+//     menu.style.display="block";
+// });
+
+
+// Segunda forma de hacerlo pero solo cuando pasamos el mouse sobre el boton
+
+let menu = document.getElementById("miMenu");
+let boton = document.getElementById("miBoton");
+
+boton.addEventListener('mouseover', function(){
+    menu.style.display='block';
 });
-campo.addEventListener('keypress', function(e){
-    console.log('Caracter ingresado: ' + e.key)
+boton.addEventListener('mouseout', function(){
+    menu.style.display='none';
+});
 
-})
+document.addEventListener('mousemove', function(e){
+    console.log(`Posicion X:  ${e.clientX} - Posicion Y: ${e.clientY}`)
+});
+
+
+
+
+
+
+
 
 
 
