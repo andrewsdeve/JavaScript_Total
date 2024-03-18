@@ -42,7 +42,7 @@ Promise.all([promesa1,promesa2]).then(function(valores){
 
 console.log('El codigo sigue su camino'); */
 
-function obtenerUsuarios(){
+/* function obtenerUsuarios(){
     return new Promise(function(resolve,reject){
         let xhr = new  XMLHttpRequest();
         xhr.open('GET','https://jsonplaceholder.typicode.com/users');
@@ -60,3 +60,22 @@ obtenerUsuarios()
 .then(function(usuarios){
     console.log(usuarios);
 })
+ */
+
+//Ejercicios Udemy
+
+/* Dentro de la función test, asignar a la variable promesa, un nuevo objeto Promise (promesa) que según la variable resultado (boolean), si la misma es true, llame al método resolve pasando el parámetro "Correcto" y en caso contrario (false), llamar al método reject pasando el parámetro "Error". */
+
+function test(promesa){
+    let promesa = new promesa(function(resolve,reject){
+        let resultado = true;
+        setTimeout(()=> {
+            if (resultado) {
+                resolve("La operación fue exitosa");
+            } else {
+                reject("Error en la operación");
+            }
+        });
+    });
+    }
+
