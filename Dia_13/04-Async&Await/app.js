@@ -23,6 +23,10 @@ console.log(`El codigo Sigue`); */
 
     // Ejemplo mas complejo
 
+    function refrescar(){
+        document.getElementById('body').value = ' ';
+    }
+
 async function obtenerDatos(){
     console.log(`Este codigo esta al comienzo ....`)
     let respuestaGasolina = await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico');
