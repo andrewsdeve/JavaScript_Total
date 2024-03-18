@@ -1,2 +1,1 @@
-document.getElementById("img-logo").setAttribute('src',"jordanNike.png")
-document.getElementById("title-principal").textContent = "Ayuda";
+document.getElementById('img-logo-jordan').setAttribute('src','jordanNike.png');
