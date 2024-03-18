@@ -53,7 +53,6 @@
 }
 
 .container-nav{
-    background-color: blue;
     width: 33.3%;
     height: 55px;
 }
@@ -70,7 +69,50 @@
     height: 55px;
 }
 
-.container-nav{
-    display: inline-block
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
 }
 
+.nav li{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color:black;
+    font-family: HelveticaNowText, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.4px
+
+}
+
+.container-search{
+    display: flex;
+    margin-right: 40px;
+}
+
+.lupa{
+    width: 30px;
+    height: 30px;
+    
+    
+}
+
+.input-search{
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    text-align: center;
+    margin-top: 8px;
+}
