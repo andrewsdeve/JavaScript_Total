@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+/*Estilos Propios*/
+
+body{
+  background: black;
+}
+h1{
+  color: whitesmoke;
+  font-size: 22px;
+}
