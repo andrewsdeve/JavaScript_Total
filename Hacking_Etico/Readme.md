@@ -19,6 +19,7 @@
 - `index of:` : lista los ficheros que hay en un directorio.
 - `chat/logs` : para ver conversaciones en servidores IRC.
 -  inurl:index.php?id= : 
+- site:gov filetype:pdf allintitle:restricted
 
 
 #### EJEMPLOS DE USO DE LOS COMANDOS ANTERIORES
