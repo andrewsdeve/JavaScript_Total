@@ -71,12 +71,9 @@ markdown cheatsheet [site:github.com/adam-p/markdown-here]
 imagenes de perfil de github [intitle:"profile picture" site:github.com]
 archivos pdf [filetype:pdf]
 
-## Google Hacking Database
+## HERRAMIENTA SHODAN !!
 
-
-
-
-
+-- Recorrer internet por medio de las direcciones ip, analiza los puertos, y que servicios estan corriendo, devuelve informacion BANER
 
 ### SEGUNDA FASE (Recopilacion Semi Pasiva de Informacion) 
 ### TERCERA FASE (Recopilacion Activa de Informacion) 
