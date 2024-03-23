@@ -18,6 +18,7 @@
 - `related:` : muestra información relacionada con una búsqueda anterior
 - `index of:` : lista los ficheros que hay en un directorio.
 - `chat/logs` : para ver conversaciones en servidores IRC.
+-  inurl:index.php?id= : 
 
 
 #### EJEMPLOS DE USO DE LOS COMANDOS ANTERIORES
