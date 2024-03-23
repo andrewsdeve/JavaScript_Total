@@ -125,11 +125,9 @@ A continuación se presentan algunos de los filtros más relevantes para el uso 
 
 - vuln: CVE ID for a vulnerability string
 
-
-
-
-
 -- Recorrer internet por medio de las direcciones ip, analiza los puertos, y que servicios estan corriendo, devuelve informacion BANER
+
+### CENSIS 
 
 ### SEGUNDA FASE (Recopilacion Semi Pasiva de Informacion) 
 ### TERCERA FASE (Recopilacion Activa de Informacion) 
