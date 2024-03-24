@@ -127,7 +127,33 @@ A continuación se presentan algunos de los filtros más relevantes para el uso 
 
 -- Recorrer internet por medio de las direcciones ip, analiza los puertos, y que servicios estan corriendo, devuelve informacion BANER
 
-### CENSIS 
+### CENSIS Herramienta
+-- Repositorios Interesantes
+
+> https://archive.org/
+
+> whois sogemer.net
+
+# THE HARVESTER
+
+**The Harvester es una herramienta de recopilación de información que utiliza múltiples fuentes para obtener datos sobre dispositivos, redes.
+
+
+##Comandos para acceder a los entornos de theHarvester
+
+> version Actualizada
+- theHarvester -h
+
+>Version con el entorno antiguo
+- cd old_harvester  
+- conda activate old_harvester
+- cd theHarvester-3.2.2 
+-python theHarvester.py -h
+
+
+
+
+
 
 ### SEGUNDA FASE (Recopilacion Semi Pasiva de Informacion) 
 ### TERCERA FASE (Recopilacion Activa de Informacion) 
